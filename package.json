@@ -17,6 +17,7 @@
     "node": "4.5.0"
   },
   "dependencies": {
-    "express": "^4.15.3"
+    "express": "^4.15.3",
+    "valid-url": "^1.0.9"
   }
 }
