@@ -18,6 +18,9 @@
   },
   "dependencies": {
     "express": "^4.15.3",
+    "mongodb": "^2.2.28",
+    "mongoose": "^4.10.6",
+    "mongoose-auto-increment": "^5.0.1",
     "valid-url": "^1.0.9"
   }
 }

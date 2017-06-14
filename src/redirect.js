@@ -1,10 +1,14 @@
 'use strict';
 
 module.exports = function(req, res) {
-    var origURL = getOrigURL(req.params.shorturl);
-    res.redirect(origURL);
+    getOrigURL(req.params.shorturl, function(err, origUrl) {
+        if (err) console.error(err);
+        console.log('Redirecting to', origUrl, '...');
+        res.redirect(origUrl);
+    });
 };
      
-function getOrigURL(shorturl) { //TODO
-    return 'http://www.google.com';
+function getOrigURL(shorturl, callback) { 
+    var origUrl = 'http://www.google.com';  //TODO
+    callback("", origUrl);
 }
