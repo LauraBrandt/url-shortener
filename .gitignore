@@ -2,6 +2,3 @@ node_modules
 notes.txt
 mongod
 data/
-src/mongoose-test.js
-src/models_old.js
-src/shortener_old.js

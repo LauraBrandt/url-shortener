@@ -1,0 +1,29 @@
+.container {
+    margin-bottom: 6%;
+}
+
+blockquote {
+    margin-top: 2%;
+    margin-bottom: 3%;
+    padding-top: 0.5%;
+}
+
+li {
+    font-size: 0.9em;
+}
+
+.instructions h3 {
+    margin-top: 0.5%;
+    font-size: 2em;
+    margin-bottom: -3%;
+}
+
+.instructions h4 {
+    padding-top: 4%;
+    font-size: 1.4em;
+}
+
+.instructions h5 {
+    font-weight: bold;
+    padding-top: 1%;
+}
