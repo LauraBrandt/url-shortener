@@ -13,7 +13,7 @@ module.exports = function(app) {
       shortener(req, res);
     });
     
-    app.get('/:shorturl', (req, res) => {
+    app.get('/:shortid', (req, res) => {
       console.log('Getting original URL ...');
       redirect(req, res);
     });

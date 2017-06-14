@@ -12,7 +12,7 @@ autoIncrement.initialize(connection);
 
 var urlSchema = new Schema({
   original: String,
-  shortened: String,
+  shortened: { type: String, unique: true },
   urlId: Number
 });
  
