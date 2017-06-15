@@ -1,6 +1,6 @@
 'use strict';
 
-var Url = require("./models.js");
+var Url = require("./url_model.js");
 
 module.exports = function(req, res) {
     var shortUrl = req.headers['x-forwarded-proto'] + '://' + req.headers.host + '/' + req.params.shortid;
@@ -17,15 +17,14 @@ module.exports = function(req, res) {
     );
 };
      
-function getOrigURL(shortUrl, callback, error_handler) { 
-    Url.find({shortened: shortUrl}, function(err, docs) {
+function getOrigURL(shortUrl, callback, handleNoData) { 
+    Url.findOne({shortened: shortUrl}, function(err, doc) {
         if (err) console.log(err);
-        if (docs[0]) {
-            callback("", docs[0].original);    
+        if (doc) {
+            callback("", doc.original);    
         }
-        else { // no results found
-            error_handler();
+        else {
+            handleNoData();
         }
     });
-    
 }

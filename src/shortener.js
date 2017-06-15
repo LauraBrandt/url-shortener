@@ -1,7 +1,7 @@
 'use strict';
 
 var validUrl = require('valid-url');
-var Url = require("./models.js");
+var Url = require("./url_model.js");
 
 module.exports = function(req, res) {
     var orig_url = req.params[0];
