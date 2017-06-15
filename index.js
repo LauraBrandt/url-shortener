@@ -5,7 +5,7 @@ var express = require('express');
 var routes = require('./src/routes.js');
 
 // Set up for running
-let port = process.env.PORT || 8080;
+var port = process.env.PORT || 8080;
 
 var app = express();
 
