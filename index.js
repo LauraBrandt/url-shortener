@@ -13,13 +13,13 @@ app.use(express.static(__dirname + '/public'));
 
 // Set up database connection
 var mongoose = require('mongoose');
-var DB_NAME = 'urlshortener_db';
-mongoose.connect("mongodb://localhost/" + DB_NAME);
+var DB_URL = process.env.MONGOLAB_URI;
+mongoose.connect(DB_URL);
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
 db.once("open", function(callback){
-    console.log('Mongoose default connection open to ' + "mongodb://localhost/" + DB_NAME);
+    console.log('Mongoose default connection open to ' + DB_URL);
     // Run app
     routes(app);
 });

@@ -10,13 +10,11 @@ module.exports = function(app) {
     
     app.get('/new/*', function(req, res) {
       console.log('Creating new URL ...');
-      res.writeHead(200, { "Content-Type": "text/plain" });
       shortener(req, res);
     });
     
     app.get('/:shortid', function(req, res) {
       console.log('Getting original URL ...');
-      res.writeHead(200, { "Content-Type": "text/plain" });
       redirect(req, res);
     });
     
