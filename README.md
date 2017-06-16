@@ -26,7 +26,7 @@ __Example:__
 ```json
 { 
   "Original URL": "http://foo.com:80",
-  "Shortened URL": "https://lb-url-shortener.herokuapp.com/8170"
+  "Shortened URL": "https://lb-url-shortener.herokuapp.com/1003"
 }
 ```
 
@@ -35,7 +35,7 @@ Simply copy the shortened URL from the last step into the address bar.
 
 __Example:__
 ```
-https://lb-url-shortener.herokuapp.com/8170
+https://lb-url-shortener.herokuapp.com/1003
 ```
 will redirect to:
 ```
